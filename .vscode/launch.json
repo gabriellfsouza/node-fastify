@@ -1,0 +1,37 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch TSC",
+      "program": "${workspaceFolder}/src/server.ts",
+      "preLaunchTask": "tsc: build - tsconfig.json",
+      "outFiles": [
+        "${workspaceFolder}/build/**/*.js"
+      ],
+      "skipFiles": [
+        "<node_internals>/**",
+        "${workspaceFolder}/test/**",
+      ]
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Launch TSUP",
+      "program": "${workspaceFolder}/src/server.ts",
+      "preLaunchTask": "npm: build",
+      "outFiles": [
+        "${workspaceFolder}/build/**/*.js"
+      ],
+      "skipFiles": [
+        "<node_internals>/**",
+        "${workspaceFolder}/test/**",
+      ]
+    },
+
+  ]
+}
